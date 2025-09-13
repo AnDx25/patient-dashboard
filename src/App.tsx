@@ -11,7 +11,7 @@ const PrivateRoute: React.FC<{ children: React.ReactElement }> = ({ children }) 
 
 function App() {
   return (
-    <Router>
+    <Router basename="/patient-dashboard">
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Registration />} />
