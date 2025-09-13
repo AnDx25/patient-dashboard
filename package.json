@@ -1,8 +1,8 @@
 {
-  "name": "myapp",
+  "homepage": "https://andx25.github.io/patient-dashboard",
+  "name": "patient-dashboard",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://andx25.github.io/patient-dashboard",
   "type": "module",
   "scripts": {
     "dev": "vite",
