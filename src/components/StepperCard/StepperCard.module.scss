@@ -8,6 +8,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   border-left: 5px solid $gray-color;
+  cursor: pointer;
 
   &.current {
     border-left-color: $primary-color;
@@ -28,10 +29,23 @@
 
     .stepStatus {
       font-size: $font-size-small;
-      padding: 4px 8px;
-      border-radius: 12px;
-      color: $white-color;
-      background-color: $gray-color;
+      font-weight: 600;
+      background-color: transparent !important; // Override background from status class
+      padding: 0;
+    }
+  }
+
+  .stepDetails {
+    margin-top: $spacing-md;
+    padding: $spacing-md;
+    background-color: #f9f9f9;
+    border-radius: $border-radius;
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: $spacing-xs;
+      }
     }
   }
 
@@ -42,19 +56,18 @@
   }
 
   .completed {
-    background-color: $secondary-color;
-    border-left-color: $secondary-color;
-    .stepStatus { background-color: $secondary-color; }
+    background-color: #28a745; // Green for indicator
+    color: #28a745 !important; // Green for text
   }
 
   .inProgress {
-    background-color: $primary-color;
-    border-left-color: $primary-color;
-    .stepStatus { background-color: $primary-color; }
+    background-color: #ffc107; // Yellow for indicator
+    color: #ffc107 !important; // Yellow for text
   }
 
   .pending {
-    background-color: $gray-color;
+    background-color: #6c757d; // Gray for indicator
+    color: #6c757d !important; // Gray for text
   }
 
   .subStepsContainer {
@@ -71,11 +84,6 @@
             flex-grow: 1;
             margin: 0;
             font-size: $font-size-medium;
-        }
-
-        span {
-            font-size: $font-size-small;
-            color: $neutral-text-color;
         }
     }
   }
