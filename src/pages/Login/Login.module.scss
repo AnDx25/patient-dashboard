@@ -1,0 +1,39 @@
+@use '../../styles/variables.scss' as *;
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: $spacing-md;
+
+  .loginCard {
+    background: $white-color;
+    padding: $spacing-lg;
+    border-radius: $border-radius;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+
+    h1 {
+      font-size: $font-size-h2;
+      margin-bottom: $spacing-lg;
+    }
+
+    .error {
+      color: #D32F2F;
+      margin-bottom: $spacing-md;
+    }
+
+    .registerLink {
+      margin-top: $spacing-md;
+      font-size: $font-size-small;
+
+      a {
+        color: $primary-color;
+        font-weight: bold;
+      }
+    }
+  }
+}

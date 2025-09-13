@@ -1,0 +1,51 @@
+@use '../../styles/variables.scss' as *;
+
+.dashboardContainer {
+  background-color: $neutral-light-gray;
+  min-height: 100vh;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing-md $spacing-lg;
+    background-color: $white-color;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+    .branding {
+        font-size: $font-size-h2;
+        font-weight: bold;
+        color: $primary-color;
+    }
+
+    .userInfo {
+      display: flex;
+      align-items: center;
+      gap: $spacing-md;
+
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .mainContent {
+    padding: $spacing-lg;
+
+    h1 {
+      font-size: $font-size-h1;
+      margin-bottom: $spacing-sm;
+    }
+
+    p {
+        font-size: $font-size-large;
+        color: $neutral-text-color;
+        margin-bottom: $spacing-xl;
+    }
+  }
+
+  .journeyStepper {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}

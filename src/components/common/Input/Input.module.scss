@@ -1,0 +1,27 @@
+@use '../../../styles/variables' as *;
+@use 'sass:color';
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $spacing-md;
+
+  label {
+    margin-bottom: $spacing-xs;
+    font-size: $font-size-small;
+    color: $neutral-text-color;
+  }
+
+  .input {
+    padding: $spacing-sm;
+    border: 1px solid $light-gray-color;
+    border-radius: $border-radius;
+    font-size: $font-size-medium;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 0 2px color.scale($primary-color, $lightness: 30%);
+    }
+  }
+}

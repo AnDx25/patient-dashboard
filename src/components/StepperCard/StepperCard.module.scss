@@ -1,0 +1,82 @@
+@use '../../styles/variables.scss' as *;
+
+.stepperCard {
+  background-color: $white-color;
+  border-radius: $border-radius;
+  padding: $spacing-md;
+  margin-bottom: $spacing-md;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border-left: 5px solid $gray-color;
+
+  &.current {
+    border-left-color: $primary-color;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .stepHeader {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+
+    .stepTitle {
+      flex-grow: 1;
+      font-size: $font-size-large;
+      margin: 0;
+    }
+
+    .stepStatus {
+      font-size: $font-size-small;
+      padding: 4px 8px;
+      border-radius: 12px;
+      color: $white-color;
+      background-color: $gray-color;
+    }
+  }
+
+  .statusIndicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+
+  .completed {
+    background-color: $secondary-color;
+    border-left-color: $secondary-color;
+    .stepStatus { background-color: $secondary-color; }
+  }
+
+  .inProgress {
+    background-color: $primary-color;
+    border-left-color: $primary-color;
+    .stepStatus { background-color: $primary-color; }
+  }
+
+  .pending {
+    background-color: $gray-color;
+  }
+
+  .subStepsContainer {
+    padding-left: $spacing-xl;
+    margin-top: $spacing-md;
+
+    .subStep {
+        display: flex;
+        align-items: center;
+        gap: $spacing-sm;
+        padding: $spacing-xs 0;
+
+        p {
+            flex-grow: 1;
+            margin: 0;
+            font-size: $font-size-medium;
+        }
+
+        span {
+            font-size: $font-size-small;
+            color: $neutral-text-color;
+        }
+    }
+  }
+}

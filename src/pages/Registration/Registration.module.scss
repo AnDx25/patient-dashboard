@@ -1,0 +1,52 @@
+@use '../../styles/variables.scss' as *;
+
+.registrationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: $spacing-md;
+
+  .registrationCard {
+    background: $white-color;
+    padding: $spacing-lg;
+    border-radius: $border-radius;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+
+    h1 {
+      font-size: $font-size-h2;
+      text-align: center;
+      margin-bottom: $spacing-lg;
+    }
+
+    .successMessage {
+      text-align: center;
+
+      h2 {
+        color: $secondary-color;
+        font-size: $font-size-h3;
+      }
+
+      strong {
+        color: $primary-color;
+      }
+
+      a {
+        display: inline-block;
+        margin-top: $spacing-md;
+      }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        button {
+            align-self: center;
+        }
+    }
+
+  }
+}
